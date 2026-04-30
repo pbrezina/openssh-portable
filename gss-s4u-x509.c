@@ -316,7 +316,7 @@ ssh_gssapi_s4u_x509_build_cert(
 
 	/* Subject: CN = user */
 	if (X509_NAME_add_entry_by_NID(X509_get_subject_name(cert),
-	    NID_commonName, MBSTRING_UTF8,
+	    NID_name, MBSTRING_UTF8,
 	    (unsigned char *)user, (int)strlen(user), -1, 0) != 1) {
 		error_f("S4U X.509: failed to set Subject CN");
 		goto done;
